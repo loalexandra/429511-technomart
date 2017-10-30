@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Alexandra Lobovikova](https://up.htmlacademy.ru/htmlcss/19/user/429511).
-* Наставник: `Неизвестно`.
+* Наставник: [Екатерина Анплитова](https://htmlacademy.ru/profile/anplitova).
 
 ---
 
