@@ -38,36 +38,39 @@
       <li><a href="">Контакты</a></li>
     </ul>
   </nav>
-</header>
+  </header>
   <main>
     <ul class="breadcrumbs">
       <li><a href="">Home</a></li>
       <li><a href="">Каталог</a></li>
-      <li><a href="">Инструмент</a></a></li>
+      <li><a href="">Инструмент</a></a>
+      </li>
       <li><a href="">Перфораторы</a></li>
     </ul>
     <section class="product">
       <h1>Перфораторы</h1>
       <section class="product-filter">
-        <h2>Фильтр:</h2>
-        <section class="product-filter-price">
-          <h3>Цена:</h3>
-          <input type="range" min="0" max="100" step="1" value="50">
-        </section>
-        <section class="product-filter-company">
-          <h3>Производители:</h3>
-          <label><input id="checkBox-bosh" type="checkbox" name="brand">Bosh</label>
-          <label><input id="checkBox-interskol" type="checkbox" name="brand">Интерскол</label>
-          <label><input id="checkBox-makita" type="checkbox" name="brand">Makita</label>
-          <label><input id="checkBox-dewalt" type="checkbox" name="brand">DeWalt</label>
-          <label><input id="checkBox-hitachi" type="checkbox" name="brand">Hitachi</label>
-        </section>
-        <section class="product-filter-supply">
-          <h3>Питание:</h3>
-          <label><input id="radio-battery" type="radio" name="supply">Аккумуляторные</label>
-          <label><input id="radio-network" type="radio" name="supply">Сетевые</label>
-        </section>
-        <button type="button" class="product-filter-button">Показать</button>
+        <form>
+          <h2>Фильтр:</h2>
+          <section class="product-filter-price">
+            <h3>Цена:</h3>
+            <input type="range" min="0" max="100" step="1" value="50">
+          </section>
+          <section class="product-filter-company">
+            <h3>Производители:</h3>
+            <label><input id="checkBox-bosh" type="checkbox" name="brand">Bosh</label>
+            <label><input id="checkBox-interskol" type="checkbox" name="brand">Интерскол</label>
+            <label><input id="checkBox-makita" type="checkbox" name="brand">Makita</label>
+            <label><input id="checkBox-dewalt" type="checkbox" name="brand">DeWalt</label>
+            <label><input id="checkBox-hitachi" type="checkbox" name="brand">Hitachi</label>
+          </section>
+          <section class="product-filter-supply">
+            <h3>Питание:</h3>
+            <label><input id="radio-battery" type="radio" name="supply">Аккумуляторные</label>
+            <label><input id="radio-network" type="radio" name="supply">Сетевые</label>
+          </section>
+          <button type="button" class="product-filter-button">Показать</button>
+        </form>
       </section>
       <section class="product-sort">
         <h2>Сортировка:</h2>
@@ -83,132 +86,123 @@
       </section>
       <section class="products-list">
         <h2 class="visually-hidden">Список товаров</h2>
-        <!-- Всплывающее окно с добавлением товара в корзину -->
-        <section class="product-list-cart-popup">
-          <button type="button" name="close-popup-button">x</button>
-          <p>Товар добавлен в корзину!</p>
-          <a href="#">Оформить заказ</a></li>
-          <button type="button" name="continue-popup-button">Продолжить покупки</button>
-          </ul>
-        </section>
-        <!-- Всплывающее окно с добавлением товара в корзину -->
         <ul>
           <li>
-            <img src="http://placehold.it/200x200" alt="">
-            <a href="">
-              <h3>Перфоратор BOSH BFG 3000</h3>
-            </a>
-            <span class="old-price">22500 Р.</span>
-            <span class="new-price">15500 Р.</span>
-            <!-- Видно только при наведении -->
-            <ul class="product-list-buttons">
-              <li><button type="button" name="product-buy-button">Купить</button></li>
-              <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
-            </ul>
+            <article class="product">
+              <img src="img/bosh-3000.jpg" alt="Перфоратор BOSH BFG 3000" width="127" height="112">
+              <h3><a href="">Перфоратор BOSH BFG 3000</a></h3>
+              <span class="old-price">22500 Р.</span>
+              <span class="new-price">15500 Р.</span>
+              <!-- Видно только при наведении -->
+              <ul class="product-list-buttons">
+                <li><button type="button" name="product-buy-button">Купить</button></li>
+                <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
+              </ul>
+            </article>
           </li>
           <li>
-            <img src="http://placehold.it/200x200" alt="">
-            <a href="">
-              <h3>Перфоратор BOSH BFG 6000</h3>
-            </a>
-            <span class="old-price">30500 Р.</span>
-            <span class="new-price">25500 Р.</span>
-            <!-- Видно только при наведении -->
-            <ul class="product-list-buttons">
-              <li><button type="button" name="product-buy-button">Купить</button></li>
-              <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
-            </ul>
+            <article class="product">
+              <img src="img/bosh-6000.jpg" alt="Перфоратор BOSH BFG 6000" width="144" height="128">
+              <h3><a href="">Перфоратор BOSH BFG 6000</a></h3>
+              <span class="old-price">30500 Р.</span>
+              <span class="new-price">25500 Р.</span>
+              <!-- Видно только при наведении -->
+              <ul class="product-list-buttons">
+                <li><button type="button" name="product-buy-button">Купить</button></li>
+                <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
+              </ul>
+            </article>
           </li>
           <li>
-            <img src="http://placehold.it/200x200" alt="">
-            <a href="">
-              <h3>Перфоратор BOSH BFG 2000</h3>
-            </a>
-            <span class="old-price"></span>
-            <span class="new-price">12500 Р.</span>
-            <!-- Видно только при наведении -->
-            <ul class="product-list-buttons">
-              <li><button type="button" name="product-buy-button">Купить</button></li>
-              <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
-            </ul>
+            <article class="product product-new">
+              <img src="img/bosh-2000.jpg" alt="Перфоратор BOSH BFG 2000" width="127" height="112">
+              <h3><a href="">Перфоратор BOSH BFG 2000</a></h3>
+              <span class="old-price"></span>
+              <span class="new-price">12500 Р.</span>
+              <!-- Видно только при наведении -->
+              <ul class="product-list-buttons">
+                <li><button type="button" name="product-buy-button">Купить</button></li>
+                <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
+              </ul>
+            </article>
           </li>
           <li>
-            <img src="http://placehold.it/200x200" alt="">
-            <a href="">
-              <h3>Перфоратор BOSH BFG 3000</h3>
-            </a>
-            <span class="old-price">22500 Р.</span>
-            <span class="new-price">15500 Р.</span>
-            <!-- Видно только при наведении -->
-            <ul class="product-list-buttons">
-              <li><button type="button" name="product-buy-button">Купить</button></li>
-              <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
-            </ul>
+            <article class="product">
+              <img src="img/bosh-3000.jpg" alt="Перфоратор BOSH BFG 3000" width="127" height="112">
+              <h3><a href="">Перфоратор BOSH BFG 3000</a></h3>
+              <span class="old-price">22500 Р.</span>
+              <span class="new-price">15500 Р.</span>
+              <!-- Видно только при наведении -->
+              <ul class="product-list-buttons">
+                <li><button type="button" name="product-buy-button">Купить</button></li>
+                <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
+              </ul>
+            </article>
           </li>
           <li>
-            <img src="http://placehold.it/200x200" alt="">
-            <a href="">
-              <h3>Перфоратор BOSH BFG 6000</h3>
-            </a>
-            <span class="old-price">30500 Р.</span>
-            <span class="new-price">25500 Р.</span>
-            <!-- Видно только при наведении -->
-            <ul class="product-list-buttons">
-              <li><button type="button" name="product-buy-button">Купить</button></li>
-              <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
-            </ul>
+            <article class="product">
+              <img src="img/bosh-6000.jpg" alt="Перфоратор BOSH BFG 6000" width="144" height="128">
+              <h3><a href="">Перфоратор BOSH BFG 6000</a></h3>
+              <span class="old-price">30500 Р.</span>
+              <span class="new-price">25500 Р.</span>
+              <!-- Видно только при наведении -->
+              <ul class="product-list-buttons">
+                <li><button type="button" name="product-buy-button">Купить</button></li>
+                <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
+              </ul>
+            </article>
           </li>
           <li>
-            <img src="http://placehold.it/200x200" alt="">
-            <a href="">
-              <h3>Перфоратор BOSH BFG 2000</h3>
-            </a>
-            <span class="old-price"></span>
-            <span class="new-price">12500 Р.</span>
-            <!-- Видно только при наведении -->
-            <ul class="product-list-buttons">
-              <li><button type="button" name="product-buy-button">Купить</button></li>
-              <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
-            </ul>
+            <article class="product product-new">
+              <img src="img/bosh-2000.jpg" alt="Перфоратор BOSH BFG 2000" width="127" height="112">
+              <h3><a href="">Перфоратор BOSH BFG 2000</a></h3>
+              <span class="old-price"></span>
+              <span class="new-price">12500 Р.</span>
+              <!-- Видно только при наведении -->
+              <ul class="product-list-buttons">
+                <li><button type="button" name="product-buy-button">Купить</button></li>
+                <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
+              </ul>
+            </article>
           </li>
           <li>
-            <img src="http://placehold.it/200x200" alt="">
-            <a href="">
-              <h3>Перфоратор BOSH BFG 3000</h3>
-            </a>
-            <span class="old-price">22500 Р.</span>
-            <span class="new-price">15500 Р.</span>
-            <!-- Видно только при наведении -->
-            <ul class="product-list-buttons">
-              <li><button type="button" name="product-buy-button">Купить</button></li>
-              <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
-            </ul>
+            <article class="product">
+              <img src="img/bosh-3000.jpg" alt="Перфоратор BOSH BFG 3000" width="127" height="112">
+              <h3><a href="">Перфоратор BOSH BFG 3000</a></h3>
+              <span class="old-price">22500 Р.</span>
+              <span class="new-price">15500 Р.</span>
+              <!-- Видно только при наведении -->
+              <ul class="product-list-buttons">
+                <li><button type="button" name="product-buy-button">Купить</button></li>
+                <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
+              </ul>
+            </article>
           </li>
           <li>
-            <img src="http://placehold.it/200x200" alt="">
-            <a href="">
-              <h3>Перфоратор BOSH BFG 6000</h3>
-            </a>
-            <span class="old-price">30500 Р.</span>
-            <span class="new-price">25500 Р.</span>
-            <!-- Видно только при наведении -->
-            <ul class="product-list-buttons">
-              <li><button type="button" name="product-buy-button">Купить</button></li>
-              <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
-            </ul>
+            <article class="product">
+              <img src="img/bosh-6000.jpg" alt="Перфоратор BOSH BFG 6000" width="144" height="128">
+              <h3><a href="">Перфоратор BOSH BFG 6000</a></h3>
+              <span class="old-price">30500 Р.</span>
+              <span class="new-price">25500 Р.</span>
+              <!-- Видно только при наведении -->
+              <ul class="product-list-buttons">
+                <li><button type="button" name="product-buy-button">Купить</button></li>
+                <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
+              </ul>
+            </article>
           </li>
           <li>
-            <img src="http://placehold.it/200x200" alt="">
-            <a href="">
-              <h3>Перфоратор BOSH BFG 2000</h3>
-            </a>
-            <span class="old-price"></span>
-            <span class="new-price">12500 Р.</span>
-            <!-- Видно только при наведении -->
-            <ul class="product-list-buttons">
-              <li><button type="button" name="product-buy-button">Купить</button></li>
-              <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
-            </ul>
+            <article class="product product-new">
+              <img src="img/bosh-2000.jpg" alt="Перфоратор BOSH BFG 2000" width="127" height="112">
+              <h3><a href="">Перфоратор BOSH BFG 2000</a></h3>
+              <span class="old-price"></span>
+              <span class="new-price">12500 Р.</span>
+              <!-- Видно только при наведении -->
+              <ul class="product-list-buttons">
+                <li><button type="button" name="product-buy-button">Купить</button></li>
+                <li><button type="button" name="product-bookmarks-button">В закладки</button></li>
+              </ul>
+            </article>
           </li>
         </ul>
       </section>
@@ -264,6 +258,15 @@
       <p>Разработано - <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
     </div>
   </footer>
+  <!-- Всплывающее окно с добавлением товара в корзину -->
+  <section class="product-list-cart-popup">
+    <button type="button" name="close-popup-button">x</button>
+    <p>Товар добавлен в корзину!</p>
+    <a href="#">Оформить заказ</a></li>
+    <button type="button" name="continue-popup-button">Продолжить покупки</button>
+    </ul>
+  </section>
+  <!-- Всплывающее окно с добавлением товара в корзину -->
 </body>
 
 </html>

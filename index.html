@@ -13,7 +13,7 @@
       <form class="header-form-search" method="get" action="https://echo.htmlacademy.ru/">
         <input class="header-form-search-input" type="search" name="search" placeholder="Поиск">
       </form>
-      <a class="header-link link-cart" href="">Закладки:(0)</a>
+      <a class="header-link link-bookmark" href="">Закладки:(0)</a>
       <a class="header-link link-cart" href="">Корзина:(0)</a>
       <a class="header-link link-order" href="">Оформить заказ</a>
     </div>
@@ -75,7 +75,7 @@
       <ul class="product-list">
         <li>
           <article class="product">
-            <img src="http://placehold.it/200x200" alt="Перфоратор BOSH BFG 9000">
+            <img src="img/bosh-9000.jpg" alt="Перфоратор BOSH BFG 9000" width="184" height="164">
             <h3><a href="">Перфоратор BOSH BFG 9000</a></h3>
             <span class="old-price">32500 Р.</span>
             <span class="new-price">22500 Р.</span>
@@ -88,7 +88,7 @@
         </li>
         <li>
           <article class="product">
-            <img src="http://placehold.it/200x200" alt="Перфоратор BOSH BFG 3000">
+            <img src="img/bosh-3000.jpg" alt="Перфоратор BOSH BFG 3000" width="127" height="112">
             <h3><a href="">Перфоратор BOSH BFG 3000</a></h3>
             <span class="old-price">22500 Р.</span>
             <span class="new-price">15500 Р.</span>
@@ -101,7 +101,7 @@
         </li>
         <li>
           <article class="product">
-            <img src="http://placehold.it/200x200" alt="Перфоратор BOSH BFG 6000">
+            <img src="img/bosh-6000.jpg" alt="Перфоратор BOSH BFG 6000" width="144" height="128">
             <h3><a href="">Перфоратор BOSH BFG 6000</a></h3>
             <span class="old-price">30500 Р.</span>
             <span class="new-price">25500 Р.</span>
@@ -113,8 +113,8 @@
           </article>
         </li>
         <li>
-          <article class="product">
-            <img src="http://placehold.it/200x200" alt="Перфоратор BOSH BFG 2000">
+          <article class="product product-new">
+            <img src="img/bosh-2000.jpg" alt="Перфоратор BOSH BFG 2000" width="127" height="112">
             <h3><a href="">Перфоратор BOSH BFG 2000</a></h3>
             <span class="old-price"></span>
             <span class="new-price">12500 Р.</span>
@@ -133,14 +133,14 @@
         <a class="learn-more-button" href="">Все популярные производители</a>
       </div>
       <ul class="brand-list">
-        <li><a href=""><img src="http://placehold.it/150x100" alt="Bosh"></a></li>
-        <li><a href=""><img src="http://placehold.it/150x100" alt="Makita"></a></li>
-        <li><a href=""><img src="http://placehold.it/150x100" alt="DeWalt"></a></li>
-        <li><a href=""><img src="http://placehold.it/150x100" alt="Интерскол"></a></li>
-        <li><a href=""><img src="http://placehold.it/150x100" alt="Hitachi"></a></li>
-        <li><a href=""><img src="http://placehold.it/150x100" alt="LG"></a></li>
-        <li><a href=""><img src="http://placehold.it/150x100" alt="AEG Power Solution"></a></li>
-        <li><a href=""><img src="http://placehold.it/150x100" alt="Metabo"></a></li>
+        <li><a href=""><img src="img/bosch.png" alt="Bosch" width="126" height="37"></a></li>
+        <li><a href=""><img src="img/Makita.png" alt="Makita" width="123" height="40"></a></li>
+        <li><a href=""><img src="img/DeWALT.png" alt="DeWalt" width="146" height="44"></a></li>
+        <li><a href=""><img src="img/interskol.png" alt="Интерскол" width="200" height="88"></a></li>
+        <li><a href=""><img src="img/Hitachi.png" alt="Hitachi" width="169" height="31"></a></li>
+        <li><a href=""><img src="img/LG.png" alt="LG" width="121" height="73"></a></li>
+        <li><a href=""><img src="img/AEG.png" alt="AEG Power Solution" width="151" height="96"></a></li>
+        <li><a href=""><img src="img/Metabo.png" alt="Metabo" width="204" height="69"></a></li>
       </ul>
     </section>
     <section class="services">
@@ -201,7 +201,7 @@
           <h3>Контакты</h3>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
           <figure class="about-map">
-            <!-- здесь будет карта -->
+            <img src="img/map-mini.png" alt="Карта с нашим адресом: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158">
           </figure>
           <button class="about-write-us" type="button">Заблудились? Напишите нам!</button>
         </section>
@@ -246,14 +246,24 @@
 
   <!-- Всплывающее окно - карта -->
   <section class="about-map-popup">
-    <!-- здесь будет всплывающая карта -->
+    <button type="button" name="close-popup-button">x</button>
+    <img src="img/map-max.png" alt="Карта с нашим адресом: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="940" height="446">
   </section>
   <!-- Всплывающее окно - карта -->
 
   <!-- Всплывающее окно "напишите нам"-->
   <section class="about-write-us-popup">
+    <button type="button" name="close-popup-button">x</button>
     <h3 class="visually-hidden">Напишите нам</h3>
-    <!-- здесь будет форма -->
+    <form class="write-us-form" method="post" action="https://echo.htmlacademy.ru/">
+      <label for="write-us-form-name">Имя:</label>
+      <input type="text" placeholder="Представьтесь, пожалуйста" id="write-us-form-name">
+      <label for="write-us-form-email">Ваш e-mail:</label>
+      <input type="text" placeholder="Для отправки ответа" id="write-us-form-email">
+      <label for="write-us-form-text">Текст письма:</label>
+      <textarea placeholder="В свободной форме" id="write-us-form-text" cols="30" rows="10"></textarea>
+      <button type="submit">Отправить</button>
+    </form>
   </section>
   <!-- Всплывающее окно "напишите нам"-->
 
