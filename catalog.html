@@ -3,45 +3,48 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Техномарт - Каталог товаров</title>
 </head>
 
 <body>
-  <div class="header-top">
-    <a href="index.html" class="header-link header-logo">Техномарт</a>
-    <form class="header-form-search" method="get" action="https://echo.htmlacademy.ru/">
-      <input class="header-form-search-input" type="search" name="search" placeholder="Поиск">
-    </form>
-    <a class="header-link link-cart" href="">Закладки:(0)</a>
-    <a class="header-link link-cart" href="">Корзина:(10)</a>
-    <a class="header-link link-order" href="">Оформить заказ</a>
-  </div>
-  <div class="header-bottom">
-    <p class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-    <div>
-      <a href="tel:+78125550555" class="header-phone-link">+7 (812) 555-05-55</a>
-      <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+  <header>
+    <div class="header-top">
+      <a href="index.html" class="header-link header-logo">Техномарт</a>
+      <form class="header-form-search" method="get" action="https://echo.htmlacademy.ru/">
+        <input class="header-form-search-input" type="search" name="search" placeholder="Поиск">
+      </form>
+      <a class="header-link link-cart" href="">Закладки:(0)</a>
+      <a class="header-link link-cart" href="">Корзина:(10)</a>
+      <a class="header-link link-order" href="">Оформить заказ</a>
     </div>
-    <ul class="header-profile-controls">
-      <li><a class="profile-link profile-name" href="">Равшан Джамшутович</a></li>
-      <li><a class="profile-link profile-logout" aria-label="Выйти из профиля" href=""></a></li>
-      <li><a href="profile-link profile-orders">Мои заказы</a></li>
-      <li><a href="profile-link profile-cabinet">Личный кабинет</a></li>
-    </ul>
-  </div>
-  <nav>
-    <ul class="main-menu">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="">Компания</a></li>
-      <li><a>Каталог</a></li>
-      <li><a href="">Новости</a></li>
-      <li><a href="">Спецпредложения</a></li>
-      <li><a href="">Доставка</a></li>
-      <li><a href="">Контакты</a></li>
-    </ul>
-  </nav>
+    <div class="header-bottom">
+      <p class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+      <div>
+        <a href="tel:+78125550555" class="header-phone-link">+7 (812) 555-05-55</a>
+        <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      </div>
+      <ul class="header-profile-controls">
+        <li><a class="profile-link profile-name" href="">Равшан Джамшутович</a></li>
+        <li><a class="profile-link profile-logout" aria-label="Выйти из профиля" href=""></a></li>
+        <li><a href="profile-link profile-orders">Мои заказы</a></li>
+        <li><a href="profile-link profile-cabinet">Личный кабинет</a></li>
+      </ul>
+    </div>
+    <nav>
+      <ul class="main-menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="">Компания</a></li>
+        <li><a>Каталог</a></li>
+        <li><a href="">Новости</a></li>
+        <li><a href="">Спецпредложения</a></li>
+        <li><a href="">Доставка</a></li>
+        <li><a href="">Контакты</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
     <ul class="breadcrumbs">
@@ -64,30 +67,30 @@
           <ul>
             <li>
               <label for="checkBox-bosh">Bosh</label>
-              <input id="checkBox-bosh" type="checkbox" name="brand">
+              <input id="checkBox-bosh" type="checkbox" name="brand" value="Bosh">
             </li>
             <li>
               <label for="checkBox-interskol">Интерскол</label>
-              <input id="checkBox-interskol" type="checkbox" name="brand">
+              <input id="checkBox-interskol" type="checkbox" name="brand" value="Interskol">
             </li>
             <li>
               <label for="checkBox-makita">Makita</label>
-              <input id="checkBox-makita" type="checkbox" name="brand">
+              <input id="checkBox-makita" type="checkbox" name="brand" value="Makita">
             </li>
             <li>
               <label for="checkBox-dewalt">DeWalt</label>
-              <input id="checkBox-dewalt" type="checkbox" name="brand">
+              <input id="checkBox-dewalt" type="checkbox" name="brand" value="DeWalt">
             </li>
             <li>
               <label for="checkBox-hitachi">Hitachi</label>
-              <input id="checkBox-hitachi" type="checkbox" name="brand">
+              <input id="checkBox-hitachi" type="checkbox" name="brand" value="Hitachi">
             </li>
           </ul>
         </fieldset>
         <fieldset class="product-filter-supply">
           <legend>Питание:</legend>
-          <label><input id="radio-battery" type="radio" name="supply">Аккумуляторные</label>
-          <label><input id="radio-network" type="radio" name="supply">Сетевые</label>
+          <label><input id="radio-battery" type="radio" name="supply" value="Аккумуляторные">Аккумуляторные</label>
+          <label><input id="radio-network" type="radio" name="supply" value="Сетевые">Сетевые</label>
         </fieldset>
         <button type="submit" class="product-filter-button">Показать</button>
       </form>

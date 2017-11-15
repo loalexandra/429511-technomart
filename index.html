@@ -2,7 +2,11 @@
 <html lang="ru">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Техномарт</title>
 </head>
 
@@ -49,12 +53,12 @@
       <div class="features-item features-tool">
         <h2>Инструмент</h2>
         <a href="">на все случаи</a></div>
-      <div class="features-item features-sales">
-        <h2>Скидки</h2>
-        <a href="">50%</a></div>
       <div class="features-item features-tech">
         <h2>Техника</h2>
         <a href="">для стройки</a></div>
+      <div class="features-item features-sales">
+        <h2>Скидки</h2>
+        <a href="">50%</a></div>
       <div class="features-item features-delivery">
         <h2>Доставка</h2>
         <a href="">бесплатно</a></div>
@@ -67,19 +71,19 @@
             <button type="button" class="slider-buttons next"></button>
           </li>
         </ul>
-        <article class="slider-item">
+        <article class="slider-item slider-item-1">
           <h2>Перфораторы</h2>
           <p>Настоящие мужские игрушки</p>
           <a class="learn-more-button" href="">Открыть каталог</a>
         </article>
-        <article class="slider-item">
+        <article class="slider-item slider-item-2">
           <h2>Дрели</h2>
           <p>Соседям на радость</p>
           <a class="learn-more-button" href="">Открыть каталог</a>
         </article>
         <ul class="slider-dots">
-          <li>&middot;</li>
-          <li>&middot;</li>
+          <li></li>
+          <li></li>
         </ul>
       </section>
     </div>
@@ -195,11 +199,12 @@
             <section class="services-credit-content">
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-              <a href="credit-button">Отправить заявку</a>
+              <a href="" class="credit-button">Отправить заявку</a>
             </section>
           </li>
         </ul>
       </section>
+    </section>
       <section class="about-company">
         <h2 class="visually-hidden">О нашей компании</h2>
         <section class="about-description">
