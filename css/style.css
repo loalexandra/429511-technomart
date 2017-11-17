@@ -33,6 +33,11 @@ button.learn-more-button, a.learn-more-button {
   color: #ffffff;
   text-transform: uppercase;
   background-color: #fc2040;
+  transition: 0.3s;
+}
+
+button.learn-more-button:hover, a.learn-more-button:hover {
+  background-color: #cb2834;
 }
 
 /* Скрываем элементы */
@@ -60,6 +65,27 @@ header ul {
   padding: 0;
   list-style: none;
 }
+header .header-logo {
+   display: block;
+   width: 220px;
+   height: 47px;
+   background-color: #ef3341;
+   background-image: url("../img/logo-text.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   border-bottom: 3px solid #b72530;
+   transition: 0.3s;
+}
+
+header .header-logo:hover {
+  background-color: #cb2834;
+  border-bottom: 3px solid #9b1c26;
+}
+
+header .header-logo:active {
+  background-color: #bc222f;
+  border-bottom: 3px solid #8f1821;
+}
 
 header .header-top {
   /* Оформление */
@@ -68,12 +94,42 @@ header .header-top {
 
 /* Header icons -- start */
 
+.icon-login,
+.icon-logout,
+.icon-user {
+  fill: #c5c5c5;
+  transition: fill 0.3s ease;
+}
 
-.header-form-search::before, .header-form-search:before,
-.link-bookmark::before, .link-bookmark:before,
-.link-cart::before, .link-cart:before,
-.header-phone-link::before, .header-phone-link:before,
-.profile-login::before, .profile-login::before {
+.profile-login:hover .icon-login,
+.profile-logout:hover .icon-logout,
+.profile-name:hover .icon-user {
+  fill: #2f435b;
+}
+
+.header-profile-controls a {
+  /* Типографика */
+  font-size: 21px;
+  color: #000000;
+}
+
+ a.profile-link:hover,
+ .header-profile-controls a:hover {
+  color: #ee3643;
+}
+
+.header-form-search::before,
+.header-form-search:before,
+.header-link::before,
+.header-link:before {
+  content: " ";
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.header-phone-link::before, .header-phone-link:before {
   content: " ";
   position: absolute;
   background-size: cover;
@@ -111,7 +167,10 @@ header .header-top {
 
 .link-cart {
   padding-left: 20px;
+  transition: 0.3s;
 }
+
+/* Запуталась как вернуть прозрачность на ховере */
 
 .header-phone-link::before, .header-phone-link:before {
   width: 19px;
@@ -120,18 +179,20 @@ header .header-top {
   margin-left: -20px;
 }
 
-.profile-login::before, .profile-login:before {
-  width: 20px;
-  height: 17px;
-  background-image: url("../img/icon-login.svg");
-  margin-left: -20px;
-}
-
-.profile-login {
-  padding-left: 20px;
-}
-
 /* Header icons -- end */
+
+header .link-order {
+  background-color: #63a63e;
+  transition: 0.3s;
+}
+
+header .link-order:hover {
+  background-color: #5fbb2d;
+}
+
+header .link-order:active {
+  opacity: 0.8;
+}
 
 header .header-phone-link {
   /* Типографика */
@@ -150,15 +211,18 @@ header p.header-description {
   color: #ee3643;
 }
 
-header .header-profile-controls a {
-  /* Типографика */
-  font-size: 21px;
-  color: #000000;
-}
-
 nav .main-menu {
   /* Оформление */
-  background-color: #253448;
+  background-color: #2f405b;
+}
+
+.main-menu a:hover {
+  background-color: #293449;
+}
+
+.main-menu a:active {
+  background-color: #1d2739;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* Main */
@@ -178,6 +242,14 @@ nav .main-menu {
   text-align: center;
   /* Оформление */
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.features-item a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.features-item a:active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .features-materials {
@@ -370,6 +442,39 @@ span.old-price {
   text-decoration: line-through;
 }
 
+/* Buy and Bookmarks Buttons */
+
+.product-buy-button {
+  background-color: #63a73c;
+  color: #ffffff;
+  border: none;
+  border-bottom: 2px solid #33730e;
+  transition: 0.3s;
+}
+
+.product-buy-button:hover {
+  background-color: #5ebd29;
+}
+
+.product-buy-button:active {
+  background-color: #508631;
+}
+
+.product-bookmarks-button {
+  color: #32425c;
+  border: 2px solid #63a73c;
+  background: none;
+  transition: 0.3s;
+}
+
+.product-bookmarks-button:hover {
+  border: 2px solid #2f405b;
+}
+
+.product-bookmarks-button:active {
+  opacity: 0.5;
+}
+
 /* Services */
 
 .services {
@@ -407,6 +512,16 @@ label.services-delivery-tabs-item {
   font-size: 21px;
   line-height: 30px;
   color: #ffffff;
+  transition: 0.3s;
+}
+
+label.services-delivery-tabs-item:hover {
+  background-color: #253147;
+}
+
+label.services-delivery-tabs-item:active {
+  background-color: #ffffff;
+  color: #32425c;
 }
 
 .services .services-delivery-tabs h3 {
@@ -420,9 +535,163 @@ label.services-delivery-tabs-item {
   list-style: none;
 }
 
-.services-guarantee-content {
-  background-image: url("../img/guarantee.jpg";)
+.services-guarantee-content p::after, .services-guarantee-content p:after,
+.services-delivery-content p::after, .services-delivery-content p:after,
+.services-credit-content p::after, .services-credit-content p:after {
+  content: " ";
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
+
+.services-delivery-content p::after, .services-delivery-content p:after {
+  background-image: url("../img/delivery-bg.png");
+  width: 468px;
+  height: 261px;
+}
+
+.services-credit-content p::after, .services-credit-content p:after {
+  background-image: url("../img/credit-bg.png");
+  width: 465px;
+  height: 285px;
+}
+
+.services-guarantee-content p::after, .services-guarantee-content p:after {
+  background-image: url("../img/guarantee-bg.png");
+  width: 465px;
+  height: 285px;
+}
+
+a.credit-button {
+  background-color: #ee3643;
+
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* About Company Block */
+
+.about-company h3 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.about-description ul { /* тут я запуталась с типографикой ( */
+  list-style: none;
+
+  font-family: "CuprumBold", "Arial", sans-serif;
+  font-size: 18px;
+}
+
+/* Footer */
+
+footer {
+  background-color: #2c415c;
+  font-family: "CuprumRegular", "Arial", sans-serif;
+  color: #ffffff;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer .footer-logo {
+  display: block;
+  width: 220px;
+  height: 68px;
+  background-color: #ef3341;
+  background-image: url("../img/logo-text.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 3px solid #b72530;
+  transition: 0.3s;
+}
+
+footer .footer-logo:hover {
+ background-color: #cb2834;
+ border-bottom: 3px solid #9b1c26;
+}
+
+footer .footer-logo:active {
+ background-color: #bc222f;
+ border-bottom: 3px solid #8f1821;
+}
+
+.footer-middle, .footer-top,
+.footer-middle a, .footer-top a {
+  font-size: 18px;
+}
+
+.footer-middle a:hover,
+.footer-top a:hover,
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.footer-middle a:active,
+.footer-top a:active {
+  opacity: 0.8;
+}
+
+.footer-bottom a:active {
+  color: #ee3643;
+}
+
+.footer-middle ul a, .footer-feedback-and-design a {
+  color: #ffd180;
+}
+
+.footer-social-icons li {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #212a3a;
+  transition: 0.3s;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-social-icons li:hover {
+  background-color: #ef3341;
+}
+
+a.vk-icon::before, a.vk-icon:before,
+a.fb-icon::before, a.fb-icon:before,
+a.instagram-icon::before, a.instagram-icon:before {
+  content: " ";
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+li.vk-icon {
+  background-image: url("../img/icon-vk.svg");
+  background-size: 26px 15px;
+}
+
+li.fb-icon {
+  background-image: url("../img/icon-fb.svg");
+  background-size: 12px 22px;
+}
+
+li.instagram-icon {
+  background-image: url("../img/icon-insta.svg");
+  background-size: 21px 21px;
+}
+
+footer .footer-bottom {
+  background-color: #253448;
+  font-size: 16px;
+}
+
+/* Write Us Popup */
+
+
+
 /* Правила */
 
 /* Шрифт Cuprum */
