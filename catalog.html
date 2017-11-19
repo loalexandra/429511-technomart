@@ -24,16 +24,22 @@
     <symbol id="icon-user" viewBox="0 0 20 18">
       <path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/>
     </symbol>
+    <symbol id="icon-up" viewBox="0 0 11 10">
+      <path d="M5.5 0L0 10h11z"/>
+    </symbol>
+    <symbol id="icon-down" viewBox="0 0 11 10">
+      <path d="M5.5 10L0 0h11"/>
+    </symbol>
   </svg>
   <!-- SVG иконки - end -->
   <header>
     <div class="header-top">
-      <a href="index.html" class="header-link header-logo">Техномарт</a>
+      <a class="header-link header-logo" aria-label="Логотип компании Техномарт - название компании на красном прямоугольнике - переход на главную страницу сайта" href="index.html"></a>
       <form class="header-form-search" method="get" action="https://echo.htmlacademy.ru/">
         <input class="header-form-search-input" type="search" name="search" placeholder="Поиск">
       </form>
       <a class="header-link link-bookmark" href="">Закладки:(0)</a>
-      <a class="header-link link-cart" href="">Корзина:(10)</a>
+      <a class="header-link link-cart cart-full" href="">Корзина:(10)</a>
       <a class="header-link link-order" href="">Оформить заказ</a>
     </div>
     <div class="header-bottom">
@@ -55,8 +61,8 @@
             </svg>
           </a>
         </li>
-        <li><a href="profile-link profile-orders">Мои заказы</a></li>
-        <li><a href="profile-link profile-cabinet">Личный кабинет</a></li>
+        <li><a href="" class="profile-orders">Мои заказы</a></li>
+        <li><a href="" class="profile-cabinet">Личный кабинет</a></li>
       </ul>
     </div>
     <nav>
@@ -74,62 +80,91 @@
   <main>
     <ul class="breadcrumbs">
       <li><a href="index.html" class="breadcrumbs-home-icon" aria-label="Главная"></a></li>
-      <li><a href="">Каталог</a></li>
-      <li><a href="">Инструмент</a></a>
+      <li><a href="" class="breadcrumbs-link">Каталог</a></li>
+      <li><a href="" class="breadcrumbs-link">Инструмент</a></a>
       </li>
-      <li><a href="">Перфораторы</a></li>
+      <li><a href="" class="breadcrumbs-link">Перфораторы</a></li>
     </ul>
     <section class="catalog">
-      <h1>Перфораторы</h1>
+      <div class="catalog-h-wrapper">
+        <h1>Перфораторы</h1>
+      </div>
       <form class="product-filter" method="get" action="https://echo.htmlacademy.ru/">
-        <h2>Фильтр:</h2>
+        <div class="filter-h-wrapper">
+          <h2>Фильтр:</h2>
+        </div>
         <fieldset class="product-filter-price">
           <legend>Цена:</legend>
-          <input type="range" min="0" max="100" step="1" value="50">
+          <div class="range-content">
+            <div class="range-line">
+              <div class="range-value" style="width: 85%"></div>
+              <button class="range-button range-button-left" type="button"></button>
+              <button class="range-button range-button-right" type="button"></button>
+            </div>
+          </div>
+          <div class="range-price">
+            <input class="range-input" type="text" value="0">
+            <span class="range-text"></span>
+            <input class="range-input" type="text" value="30000">
+          </div>
         </fieldset>
         <fieldset class="product-filter-company">
           <legend>Производители:</legend>
           <ul>
             <li>
+              <input id="checkBox-bosh" type="checkbox" name="brand" value="Bosh" checked>
               <label for="checkBox-bosh">Bosh</label>
-              <input id="checkBox-bosh" type="checkbox" name="brand" value="Bosh">
             </li>
             <li>
-              <label for="checkBox-interskol">Интерскол</label>
               <input id="checkBox-interskol" type="checkbox" name="brand" value="Interskol">
+              <label for="checkBox-interskol">Интерскол</label>
             </li>
             <li>
+              <input id="checkBox-makita" type="checkbox" name="brand" value="Makita" checked>
               <label for="checkBox-makita">Makita</label>
-              <input id="checkBox-makita" type="checkbox" name="brand" value="Makita">
             </li>
             <li>
-              <label for="checkBox-dewalt">DeWalt</label>
               <input id="checkBox-dewalt" type="checkbox" name="brand" value="DeWalt">
+              <label for="checkBox-dewalt">DeWalt</label>
             </li>
             <li>
-              <label for="checkBox-hitachi">Hitachi</label>
               <input id="checkBox-hitachi" type="checkbox" name="brand" value="Hitachi">
+              <label for="checkBox-hitachi">Hitachi</label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="product-filter-supply">
           <legend>Питание:</legend>
-          <label><input id="radio-battery" type="radio" name="supply" value="Аккумуляторные">Аккумуляторные</label>
-          <label><input id="radio-network" type="radio" name="supply" value="Сетевые">Сетевые</label>
+          <input id="radio-battery" type="radio" name="supply" value="Аккумуляторные" checked>
+          <label for="radio-battery">Аккумуляторные</label>
+          <input id="radio-network" type="radio" name="supply" value="Сетевые">
+          <label for="radio-network">Сетевые</label>
         </fieldset>
         <button type="submit" class="product-filter-button">Показать</button>
       </form>
     </section>
     <section class="product-sort">
-      <legend>Сортировка:</legend>
+      <h2>Сортировка:</h2>
       <ul class="product-sort-type">
         <li><a href="" class="sort-type" id="price">По цене</a></li>
         <li><a href="" class="sort-type" id="type">По типу</a></li>
         <li><a href="" class="sort-type" id="function">По функционалу</a></li>
       </ul>
       <ul class="product-sort-start">
-        <li><a href="" class="sort" id="from-small-to-large">От меньшего к большемк</a></li>
-        <li><a href="" class="sort" name="sort" id="from-large-to-small">От большего к меньшему</a></li>
+        <li>
+          <a href="" class="sort sort-up" id="from-small-to-large" aria-label="От меньшего к большему">
+              <svg class="icon-up" width="11" height="10">
+                <use xlink:href="#icon-up"></use>
+              </svg>
+            </a>
+        </li>
+        <li>
+          <a href="" class="sort sort-down" name="sort" id="from-large-to-small" aria-label="От большего к меньшему">
+          <svg class="icon-down" width="11" height="10">
+            <use xlink:href="#icon-down"></use>
+          </svg>
+          </a>
+        </li>
       </ul>
     </section>
     <section class="products-list">
@@ -254,8 +289,8 @@
         </li>
       </ul>
     </section>
-    <ul>
-      <li><a href="">1</a></li>
+    <ul class="pagination">
+      <li class="actual-page"><a href="">1</a></li>
       <li><a href="">2</a></li>
       <li><a href="">3</a></li>
       <li><a href="">Следующая</a></li>
@@ -269,7 +304,7 @@
   </main>
   <footer>
     <div class="footer-top">
-      <a class="footer-logo" href="">Техномарт</a>
+      <a class="footer-logo" aria-label="Логотип компании Техномарт - название компании на красном прямоугольнике - переход на главную страницу сайта" href="index.html"></a>
       <div class="footer-nav">
         <ul>
           <li><a href="">Компания</a></li>
@@ -305,11 +340,12 @@
   </footer>
   <!-- Всплывающее окно с добавлением товара в корзину -->
   <section class="product-list-cart-popup">
-    <button type="button" name="close-popup-button" aria-label="Закрыть всплывающее окно">x</button>
+    <button type="button" class="close-popup-button" aria-label="Закрыть всплывающее окно"></button>
     <p>Товар добавлен в корзину!</p>
-    <a href="#">Оформить заказ</a></li>
-    <a href="catalog.html" class="continue-popup-button">Продолжить покупки</a>
-    </ul>
+    <div class="popup-buttons">
+      <a href="#" class="learn-more-button">Оформить заказ</a>
+      <a href="catalog.html" class="continue-popup-button">Продолжить покупки</a>
+    </div>
   </section>
   <!-- Всплывающее окно с добавлением товара в корзину -->
 </body>

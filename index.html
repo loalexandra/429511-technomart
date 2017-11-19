@@ -178,13 +178,13 @@
       </div>
       <ul class="brand-list">
         <li><a href=""><img src="img/bosch.jpg" alt="Bosch" width="126" height="37"></a></li>
-        <li><a href=""><img src="img/Makita.jpg" alt="Makita" width="123" height="40"></a></li>
-        <li><a href=""><img src="img/DeWALT.jpg" alt="DeWalt" width="146" height="44"></a></li>
+        <li><a href=""><img src="img/makita.jpg" alt="Makita" width="123" height="40"></a></li>
+        <li><a href=""><img src="img/dewalt.jpg" alt="DeWalt" width="146" height="44"></a></li>
         <li><a href=""><img src="img/interskol.jpg" alt="Интерскол" width="200" height="88"></a></li>
-        <li><a href=""><img src="img/Hitachi.jpg" alt="Hitachi" width="169" height="31"></a></li>
-        <li><a href=""><img src="img/LG.jpg" alt="LG" width="121" height="73"></a></li>
-        <li><a href=""><img src="img/AEG.jpg" alt="AEG Power Solution" width="151" height="96"></a></li>
-        <li><a href=""><img src="img/Metabo.jpg" alt="Metabo" width="204" height="69"></a></li>
+        <li><a href=""><img src="img/hitachi.jpg" alt="Hitachi" width="169" height="31"></a></li>
+        <li><a href=""><img src="img/lg.jpg" alt="LG" width="121" height="73"></a></li>
+        <li><a href=""><img src="img/aeg.jpg" alt="AEG Power Solution" width="151" height="96"></a></li>
+        <li><a href=""><img src="img/metabo.jpg" alt="Metabo" width="204" height="69"></a></li>
       </ul>
     </section>
     <section class="services">
@@ -196,7 +196,7 @@
         <input class="services-delivery-tab" id="tab-credit" type="radio" name="tab">
         <ul class="services-delivery-tabs-menu">
           <li>
-            <label class="services-delivery-tabs-item" for="tab-delivery">Доставка</label>
+            <label class="services-delivery-tabs-item active-item" for="tab-delivery">Доставка</label>
           </li>
           <li>
             <label class="services-delivery-tabs-item" for="tab-guarantee">Гарантия</label>
@@ -290,14 +290,14 @@
 
   <!-- Всплывающее окно - карта -->
   <section class="about-map-popup">
-    <button type="button" name="close-popup-button" aria-label="Закрыть всплывающее окно">x</button>
+    <button type="button" class="close-popup-button" aria-label="Закрыть всплывающее окно"></button>
     <img src="img/map-popup.jpg" alt="Карта с нашим адресом: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="940" height="446">
   </section>
   <!-- Всплывающее окно - карта -->
 
   <!-- Всплывающее окно "напишите нам"-->
   <section class="about-write-us-popup">
-    <button type="button" name="close-popup-button" aria-label="Закрыть всплывающее окно">x</button>
+    <button type="button" class="close-popup-button" aria-label="Закрыть всплывающее окно"></button>
     <h3 class="visually-hidden">Напишите нам</h3>
     <form class="write-us-form" method="post" action="https://echo.htmlacademy.ru/">
       <label for="write-us-form-name">Имя:</label>
@@ -306,7 +306,9 @@
       <input type="text" placeholder="Для отправки ответа" id="write-us-form-email">
       <label for="write-us-form-text">Текст письма:</label>
       <textarea placeholder="В свободной форме" id="write-us-form-text" cols="30" rows="10"></textarea>
-      <button type="submit">Отправить</button>
+      <div class="popup-buttons">
+        <button class="learn-more-button" type="submit">Отправить</button>
+      </div>
     </form>
   </section>
   <!-- Всплывающее окно "напишите нам"-->
