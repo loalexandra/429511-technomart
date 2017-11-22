@@ -12,6 +12,12 @@ html, body {
   background-color: #ffffff;
 }
 
+* {
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+}
+
 h1, h2, h3, h4, h5 {
   /* Типографика */
   font-family: "CuprumRegular";
@@ -24,6 +30,13 @@ a {
   font-family: "CuprumRegular";
   color: #ffffff;
   text-decoration: none;
+}
+
+/* Центровщик контента */
+
+.container-center {
+  display: block;
+  margin: 0 auto;
 }
 
 /* Кнопка, которая повторяется часто */
@@ -57,6 +70,7 @@ button.learn-more-button:hover, a.learn-more-button:hover {
 /* Header */
 
 header {
+  min-height: 320px;
   /* Оформление */
   background-color: #f2f7fa;
 }
@@ -90,8 +104,32 @@ header .header-logo:active {
 }
 
 header .header-top {
+  width: 100%;
+  max-height: 42px;
   /* Оформление */
   background-color: #253448;
+}
+
+.header-top-wrapper {
+  display: flex;
+  width: 940px;
+}
+
+header .header-bottom {
+    display: flex;
+    align-items: center;
+    max-width: 940px;
+    min-height: 150px;
+}
+
+nav .main-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 940px;
+  min-height: 60px;
+  /* Оформление */
+  background-color: #2f405b;
 }
 
 /* Header icons -- start */
@@ -221,11 +259,6 @@ header p.header-description {
   color: #ee3643;
 }
 
-nav .main-menu {
-  /* Оформление */
-  background-color: #2f405b;
-}
-
 .main-menu a:hover {
   background-color: #293449;
 }
@@ -240,13 +273,20 @@ nav .main-menu {
 /* Breadcrumbs */
 
 ul.breadcrumbs {
+  display: flex;
+  align-items: center;
   list-style: none;
+  padding: 0;
+  max-width: 940px;
+  min-height: 59px;
 }
 
 ul.breadcrumbs li a.breadcrumbs-link {
   color: #000000;
   font-size: 13px;
   text-transform: uppercase;
+  margin-right: 40px;
+  vertical-align: top;
 }
 
 ul.breadcrumbs li a.breadcrumbs-link::before, ul.breadcrumbs li a.breadcrumbs-link:before {
@@ -272,11 +312,34 @@ ul.breadcrumbs li a.breadcrumbs-home-icon::before {
 
 /* Section features */
 
+.features {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  width: 940px;
+  margin-top: 59px;
+}
+
+.features-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.features-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .features h2 {
   /* Типографика */
   font-size: 24px;
   line-height: 30px;
   color: #ffffff;
+}
+
+.features-item {
+  min-width: 300px;
+  height: 123px;
 }
 
 .features-item a {
@@ -285,6 +348,7 @@ ul.breadcrumbs li a.breadcrumbs-home-icon::before {
   text-align: center;
   /* Оформление */
   background-color: rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
 }
 
 .features-item a:hover {
@@ -296,21 +360,25 @@ ul.breadcrumbs li a.breadcrumbs-home-icon::before {
 }
 
 .features-materials {
+  margin-right: 20px;
   /* Оформление */
   background-color: #fcba41;
 }
 
 .features-tool {
+  margin-right: 20px;
   /* Оформление */
   background-color: #00bce1;
 }
 
 .features-sales {
+  margin-bottom: 20px;
   /* Оформление */
   background-color: #74d58c;
 }
 
 .features-tech {
+  margin-bottom: 20px;
   /* Оформление */
   background-color: #cf7ec0;
 }
@@ -367,6 +435,13 @@ ul.breadcrumbs li a.breadcrumbs-home-icon::before {
 /* Features icons -- end */
 
 /* Slider */
+
+.slider {
+  min-width: 620px;
+  min-height: 266px;
+  margin-right: 20px;
+  margin-top: -30px;
+}
 
 /* Slider Buttons -- start */
 
@@ -448,11 +523,17 @@ button.slider-buttons.next {
   color: #000000;
 }
 
-.popular-products div, .popular-company div {
+.header-for-popular {
   background-color: #f7f2ec;
+  width: 940px;
+  height: 89px;
 }
 
 /* Catalog - catalog.html */
+
+.catalog-wrapper {
+  display: flex;
+}
 
 .catalog h1 {
   font-size: 30px;
@@ -463,10 +544,20 @@ button.slider-buttons.next {
 }
 
 .catalog-h-wrapper {
+  display: flex;
+  align-items: center;
   background-color: #f2f6f8;
+  min-height: 89px;
+  max-width: 940px;
+  padding: 0;
+  padding-left: 30px;
 }
 
 /* Filter and Sort - catalog.html */
+
+.product-filter {
+  max-width: 220px;
+}
 
 .product-filter h2, .product-sort h2 {
   font-family: "PTSansRegular", "Arial", sans-serif;
@@ -496,6 +587,10 @@ button.product-filter-button {
   text-transform: uppercase;
   font-family: "PTSansRegular", "Arial", sans-serif;
   font-size: 13px;
+}
+
+.product-sort {
+  max-width: 700px;
 }
 
 .product-sort, .filter-h-wrapper {
@@ -694,6 +789,26 @@ input[type="radio"]:checked + label:before {
 
 /* Блоки product */
 
+.product-list {
+  display: flex;
+  flex-direction: row;
+  max-width: 940px;
+  padding: 0;
+}
+
+.product {
+  min-width: 220px;
+  min-height: 318px;
+  margin-top: 20px;
+  margin-right: 20px;
+
+  border: 1px solid #ebebeb;
+}
+
+.product:last-child {
+  margin-right: none;
+}
+
 .product-list-buttons button {
   text-transform: uppercase;
 }
@@ -763,6 +878,28 @@ span.old-price {
   opacity: 0.5;
 }
 
+/* Brand List */
+
+.brand-list {
+  max-width: 940px;
+  min-height: 310px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 85px;
+}
+.brand-list li {
+  width: 220px;
+  height: 145px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border: 1px solid #ebebeb;
+}
+
+.popular-company .brand-list li:nth-child(4), .popular-company .brand-list li:nth-child(8) {
+  margin-right: 0;
+}
 /* Product Description - Catalog.html */
 
 .product-description {
@@ -810,25 +947,41 @@ ul.pagination .actual-page a {
 
 .services {
   background-color: #f1f5f7;
+  padding-top: 60px;
+  margin-bottom: 80px;
+}
+
+.services-pre-content {
+  max-width: 940px;
+  margin-bottom: 25px;
 }
 
 .services h2 {
   font-size: 30px;
   font-weight: 400;
   line-height: 24px;
+  text-transform: uppercase;
 }
 
-.services-delivery-tabs-menu {}
+.services-delivery-tabs {
+  max-width: 940px;
+  display: flex;
+}
+
+.services-delivery-tabs-menu {
+  padding: 0;
+}
 
 .services-delivery-tabs-menu:after {
   content: " ";
   position: absolute;
-  top: 0;
   background-image: url("../img/tabs-line.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 10px;
   height: 272px;
+  margin-top: -220px;
+  margin-left: 252px;
 }
 
 label.services-delivery-tabs-item {
@@ -862,10 +1015,27 @@ label.active-item:hover {
   font-size: 36px;
   font-weight: 400;
   line-height: 24px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 0;
 }
 
 .services ul {
   list-style: none;
+  padding: 0;
+}
+
+.services-delivery-content-list-item {
+  min-height: 272px;
+}
+
+.services-delivery-content-list-item p {
+  width: 48%;
+}
+
+.services-delivery-tabs-menu {
+  margin-right: 80px;
 }
 
 .services-guarantee-content p::after, .services-guarantee-content p:after, .services-delivery-content p::after, .services-delivery-content p:after, .services-credit-content p::after, .services-credit-content p:after {
@@ -873,6 +1043,8 @@ label.active-item:hover {
   position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: -105px;
+  margin-left: 105px;
 }
 
 .services-delivery-content p::after, .services-delivery-content p:after {
@@ -901,11 +1073,26 @@ a.credit-button {
 
 /* About Company Block */
 
+.about-company-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 940px;
+  margin-bottom: 86px;
+}
+
 .about-company h3 {
   font-size: 30px;
   font-weight: 400;
   line-height: 24px;
   text-transform: uppercase;
+}
+
+.about-description {
+  max-width: 519px;
+}
+
+.about-contacts {
+  max-width: 300px;
 }
 
 .about-description ul {
@@ -925,6 +1112,49 @@ footer {
 
 footer ul {
   list-style: none;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  max-width: 924px;
+  margin-bottom: 27px;
+}
+
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  max-width: 924px;
+  margin-bottom: 47px;
+}
+
+.footer-nav ul, .footer-middle ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-nav ul li, .footer-middle ul li {
+  margin-right: 60px;
+}
+
+.footer-nav ul li:last-child, .footer-middle ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-bottom-wrapper {
+  max-width: 940px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-feedback-and-design {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-feedback-and-design p:first-child {
+  margin-right: 50px;
+
 }
 
 footer .footer-logo {
@@ -948,6 +1178,7 @@ footer .footer-logo:active {
   background-color: #bc222f;
   border-bottom: 3px solid #8f1821;
 }
+
 
 .footer-middle, .footer-top, .footer-middle a, .footer-top a {
   font-size: 18px;
