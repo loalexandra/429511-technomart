@@ -42,12 +42,13 @@
       </div>
       <div class="header-bottom container-center">
         <p class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-        <div>
+        <div class="header-bottom-middle">
           <a href="tel:+78125550555" class="header-phone-link">+7 (812) 555-05-55</a>
           <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <ul class="header-profile-controls">
-          <li>
+          <li><ul class="header-profile-controls-new">
+          <li class="user-profile-no-auth">
             <a class="profile-link profile-login" href="">
               <svg class="icon-login" width="20" height="17">
                 <use xlink:href="#icon-login"></use>
@@ -55,7 +56,9 @@
               Войти
             </a>
           </li>
-          <li><a href="" class="profile-link profile-register">Регистрация</a></li>
+          <li class="user-profile-no-auth"><a href="" class="profile-link profile-register">Регистрация</a></li>
+        </ul>
+        </li>
         </ul>
       </div>
     <nav>
@@ -87,30 +90,39 @@
       </div>
       <div class="features-column">
         <div class="features-item features-sales">
-          <h2>Скидки</h2>
-          <a href="">50%</a></div>
+          <h2>Скидки 50%</h2>
+          <a href="">на 350 товаров</a></div>
         <div class="features-item features-delivery">
           <h2>Доставка</h2>
           <a href="">бесплатно</a></div>
       </div>
       <section class="slider">
-        <ul>
-          <li>
-            <button type="button" class="slider-buttons prev"></button>
-          </li>
-          <li>
-            <button type="button" class="slider-buttons next"></button>
-          </li>
-        </ul>
+
         <article class="slider-item slider-item-1">
           <h2>Перфораторы</h2>
           <p>Настоящие мужские игрушки</p>
-          <a class="learn-more-button" href="">Открыть каталог</a>
+          <a class="learn-more-button slider-open" href="">Открыть каталог</a>
+          <ul>
+            <li>
+              <button type="button" class="slider-buttons prev"></button>
+            </li>
+            <li>
+              <button type="button" class="slider-buttons next"></button>
+            </li>
+          </ul>
         </article>
         <article class="slider-item slider-item-2">
           <h2>Дрели</h2>
           <p>Соседям на радость</p>
-          <a class="learn-more-button" href="">Открыть каталог</a>
+          <a class="learn-more-button slider-open" href="">Открыть каталог</a>
+          <ul>
+            <li>
+              <button type="button" class="slider-buttons prev"></button>
+            </li>
+            <li>
+              <button type="button" class="slider-buttons next"></button>
+            </li>
+          </ul>
         </article>
         <ul class="slider-dots">
           <li></li>
@@ -121,9 +133,9 @@
     <section class="popular-products">
       <div class="header-for-popular container-center">
         <h2>Популярные товары</h2>
-        <a class="learn-more-button" href="">Все популярные товары</a>
+        <a class="learn-more-button header-button" href="">Все популярные товары</a>
       </div>
-      <ul class="product-list container-center">
+      <ul class="product-list-index container-center">
         <li>
           <article class="product">
             <img src="img/bosh-9000.jpg" alt="Перфоратор BOSH BFG 9000" width="184" height="164">
@@ -164,7 +176,7 @@
           </article>
         </li>
         <li>
-          <article class="product product-new">
+          <article class="product last-product product-new">
             <img src="img/bosh-2000.jpg" alt="Перфоратор BOSH BFG 2000" width="127" height="112">
             <h3><a href="">Перфоратор BOSH BFG 2000</a></h3>
             <span class="old-price"></span>
@@ -181,7 +193,7 @@
     <section class="popular-company">
       <div class="header-for-popular container-center">
         <h2>Популярные производители</h2>
-        <a class="learn-more-button" href="">Все популярные производители</a>
+        <a class="learn-more-button header-button" href="">Все производители</a>
       </div>
       <ul class="brand-list container-center">
         <li><a href=""><img src="img/bosch.jpg" alt="Bosch" width="126" height="37"></a></li>
