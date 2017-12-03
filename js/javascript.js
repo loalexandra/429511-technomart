@@ -12,10 +12,10 @@ var mapClose = mapPopup.querySelector(".close-map");
 
 /* CART POPUP VARIABLES */
 
-var cartLink = document.getElementsByClassName("product-buy-button");
+/* var cartLink = document.getElementsByClassName("product-buy-button");
 var cartComplete = document.querySelector(".product-list-cart-popup");
 var cartContinue = cartComplete.querySelector(".continue-popup-button");
-var cartClose = cartComplete.querySelector(".close-cart");
+var cartClose = cartComplete.querySelector(".close-cart"); */
 
 /* WRITE US FUNCTION */
 
