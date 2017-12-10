@@ -236,6 +236,10 @@ a.profile-link:hover, .header-profile-controls a:hover {
   color: #ee3643;
 }
 
+a.profile-name:hover {
+  color: #000000;
+}
+
 .header-profile-controls a.profile-orders, .header-profile-controls a.profile-cabinet {
   font-size: 16px;
   color: #32425c;
@@ -287,6 +291,8 @@ a.profile-link:hover, .header-profile-controls a:hover {
   padding-bottom: 13px;
   background-color: #243147;
   border: none;
+  font-family: "CuprumRegular", "Arial", sans-serif;
+  font-size: 17px;
   color: #ffffff;
   transition: 0.3s;
 }
@@ -2160,7 +2166,7 @@ button.write-us-submit {
   box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.2);
   border-top: 7px solid #ef3341;
   z-index: 99;
-  animation-name: appearance, twitch3;
+  animation-name: appearance2, twitch2;
   animation-duration: 0.5s, 0.5s;
   animation-timing-function: ease-out, ease-out;
 }
@@ -2234,6 +2240,19 @@ button.close-map {
   }
 }
 
+@keyframes appearance2 {
+  from {
+    top: -1500px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+    margin-top: -141px;
+  }
+}
+
+
 @keyframes twitch {
   10% {
     margin-left: -400px;
@@ -2252,18 +2271,6 @@ button.close-map {
   }
   50% {
     margin-left: -380px;
-  }
-  100% {
-    margin-left: -310px;
-  }
-}
-
-@keyframes twitch3 {
-  10% {
-    margin-left: -260px;
-  }
-  50% {
-    margin-left: -360px;
   }
   100% {
     margin-left: -310px;
