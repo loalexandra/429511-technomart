@@ -634,9 +634,9 @@ ul.breadcrumbs li a.breadcrumbs-home-icon::before {
 
 .features-item a {
   width: 135px;
-  height: 38px;
   display: block;
-  padding-top: 8px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   margin-left: 25px;
   font-size: 14px;
   text-transform: uppercase;
@@ -1252,11 +1252,12 @@ input[type="radio"]:checked+label::before, input[type="radio"]:checked+label:bef
   background-image: url("../img/radio-on.svg");
 }
 
-input[type="checkbox"]:disabled+label, input[type="radio"]:disabled+label, {
+input[type="checkbox"]:disabled+label, input[type="radio"]:disabled+label {
   opacity: 0.3;
 }
 
 .product-filter label {
+  cursor: pointer;
   font-size: 15px;
   text-transform: uppercase;
 }
@@ -1302,13 +1303,21 @@ input[type="checkbox"]:disabled+label, input[type="radio"]:disabled+label, {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 220px;
   height: 318px;
   margin-top: 20px;
   border: 1px solid #ebebeb;
   transition: 0.3s;
+}
+
+.product-image {
+  width: 100%;
+  height: 164px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-list-buttons {
@@ -1365,6 +1374,8 @@ input[type="checkbox"]:disabled+label, input[type="radio"]:disabled+label, {
 }
 
 .product h3 a {
+  padding-top: 15px;
+  display: block;
   font-family: "PTSansBold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 20px;
@@ -1373,10 +1384,7 @@ input[type="checkbox"]:disabled+label, input[type="radio"]:disabled+label, {
 }
 
 .product h3 {
-  position: absolute;
   width: 148px;
-  bottom: 100px;
-  right: 33px;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -1404,10 +1412,6 @@ input[type="checkbox"]:disabled+label, input[type="radio"]:disabled+label, {
   font-size: 17px;
   font-weight: 700;
   text-align: center;
-}
-
-.product img {
-  margin-top: 30px;
 }
 
 span.new-price {
@@ -1548,6 +1552,7 @@ ul.pagination a {
   text-transform: uppercase;
   padding: 10px 15px;
   margin-right: 10px;
+  border-radius: 2px;
 }
 
 ul.pagination li:last-child a {
@@ -1663,7 +1668,7 @@ label.active-item:hover {
 }
 
 .services-delivery-tabs-menu li label {
-  padding-top: 20px;
+  padding-top: 14px;
   padding-left: 22px;
 }
 
@@ -2073,7 +2078,6 @@ a.popup-buy-button {
   animation-name: appearance, twitch2;
   animation-duration: 0.5s, 0.5s;
   animation-timing-function: ease-out, ease-out;
-  animation-delay: 0, 0.5s;
 }
 
 form.write-us-form {
@@ -2156,10 +2160,9 @@ button.write-us-submit {
   box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.2);
   border-top: 7px solid #ef3341;
   z-index: 99;
-  animation-name: appearance, twitch;
+  animation-name: appearance, twitch3;
   animation-duration: 0.5s, 0.5s;
   animation-timing-function: ease-out, ease-out;
-  animation-delay: 0, 0.5s;
 }
 
 .close-cart {
@@ -2204,7 +2207,6 @@ button.write-us-submit {
   animation-name: appearance, twitch;
   animation-duration: 0.5s, 0.5s;
   animation-timing-function: ease-out, ease-out;
-  animation-delay: 0, 0.5s;
   z-index: 99;
 }
 
@@ -2250,6 +2252,18 @@ button.close-map {
   }
   50% {
     margin-left: -380px;
+  }
+  100% {
+    margin-left: -310px;
+  }
+}
+
+@keyframes twitch3 {
+  10% {
+    margin-left: -260px;
+  }
+  50% {
+    margin-left: -360px;
   }
   100% {
     margin-left: -310px;

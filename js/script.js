@@ -10,20 +10,6 @@ var mapLink = document.querySelector(".about-map");
 var mapPopup = document.querySelector(".about-map-popup");
 var mapClose = mapPopup.querySelector(".close-map");
 
-/* CART POPUP VARIABLES */
-var cartComplete = document.querySelector(".product-list-cart-popup");
-var buttons = Array.prototype.slice.call(document.querySelectorAll('.product-buy-button'));
-var onClickButton = function(evt) {
-  evt.preventDefault();
-  document.querySelector(".product-list-cart-popup").classList.add("modal-show");
-}
-
-buttons.forEach(function(button) {
-  button.addEventListener('click', onClickButton);
-});
-
-var cartContinue = document.querySelector(".continue-popup-button");
-var cartClose = document.querySelector(".close-cart");
 
 /* WRITE US FUNCTION */
 
@@ -51,6 +37,20 @@ mapClose.addEventListener("click", function(evt) {
 });
 
 /* CART POPUP */
+
+var cartComplete = document.querySelector(".product-list-cart-popup");
+var buttons = Array.prototype.slice.call(document.querySelectorAll('.product-buy-button'));
+var onClickButton = function(evt) {
+  evt.preventDefault();
+  document.querySelector(".product-list-cart-popup").classList.add("modal-show");
+}
+
+buttons.forEach(function(button) {
+  button.addEventListener('click', onClickButton);
+});
+
+var cartContinue = document.querySelector(".continue-popup-button");
+var cartClose = document.querySelector(".close-cart");
 
 cartClose.addEventListener("click", function(evt) {
   evt.preventDefault();
