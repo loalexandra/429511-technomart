@@ -11,45 +11,48 @@ var mapPopup = document.querySelector(".about-map-popup");
 var mapClose = mapPopup.querySelector(".close-map");
 
 /* CART POPUP VARIABLES */
-
-/* var cartLink = document.getElementsByClassName("product-buy-button");
 var cartComplete = document.querySelector(".product-list-cart-popup");
-var cartContinue = cartComplete.querySelector(".continue-popup-button");
-var cartClose = cartComplete.querySelector(".close-cart"); */
+var buttons = Array.prototype.slice.call(document.querySelectorAll('.product-buy-button'));
+var onClickButton = function(evt) {
+  evt.preventDefault();
+  document.querySelector(".product-list-cart-popup").classList.add("modal-show");
+}
+
+buttons.forEach(function(button) {
+  button.addEventListener('click', onClickButton);
+});
+
+var cartContinue = document.querySelector(".continue-popup-button");
+var cartClose = document.querySelector(".close-cart");
 
 /* WRITE US FUNCTION */
 
-writeLink.addEventListener("click", function (evt) {
+writeLink.addEventListener("click", function(evt) {
   evt.preventDefault();
   writePopup.classList.add("modal-show");
   writeName.focus();
 });
 
-writeClose.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      writePopup.classList.remove("modal-show");
+writeClose.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  writePopup.classList.remove("modal-show");
 });
 
 /* INTERACTIVE MAP POPUP FUNCTION */
 
-mapLink.addEventListener("click", function (evt) {
+mapLink.addEventListener("click", function(evt) {
   evt.preventDefault();
   mapPopup.classList.add("modal-show");
 });
 
-mapClose.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      mapPopup.classList.remove("modal-show");
+mapClose.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  mapPopup.classList.remove("modal-show");
 });
 
 /* CART POPUP */
 
-cartLink.addEventListener("click", function (evt) {
+cartClose.addEventListener("click", function(evt) {
   evt.preventDefault();
-  cartComplete.classList.add("modal-show");
-});
-
-cartClose.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      cartComplete.classList.remove("modal-show");
+  cartComplete.classList.remove("modal-show");
 });
