@@ -65,6 +65,7 @@
 html, body {
   /* Блочная модель */
   margin: 0;
+  min-width: 960px;
   /* Типографика */
   font-size: 14px;
   line-height: 24px;
@@ -203,14 +204,12 @@ header .header-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 940px;
   min-height: 159px;
+  background-color: #f2f7fa;
   padding-top: 8px;
 }
 
@@ -445,7 +444,12 @@ header .header-phone-link {
   border: 3px solid #ffffff;
 }
 
+.header-profile-controls {
+  padding-top: 50px;
+}
+
 header p.header-description {
+  padding-top: 25px;
   width: 196px;
   /* Типографика */
   font-size: 16px;
@@ -459,6 +463,7 @@ header p.header-description {
 .header-bottom-middle {
   width: 270px;
   margin-right: 51px;
+  padding-top: 37px;
 }
 
 .header-bottom-middle p {
@@ -473,6 +478,7 @@ header p.header-description {
   position: relative;
   width: 299px;
   padding-left: 47px;
+  margin-top: -12px;
   padding-top: 12px;
   padding-bottom: 13px;
   background-color: #fff;
@@ -901,6 +907,7 @@ article.slider-item.slider-item-1, .slider p {
 }
 
 .slider .slider-item h2 {
+  margin: 0;
   position: relative;
   font-size: 36px;
   line-height: 30px;
@@ -958,6 +965,7 @@ article.slider-item.slider-item-1, .slider p {
 }
 
 .popular-products h2, .popular-company h2 {
+  margin: 0;
   margin-left: 30px;
   font-size: 30px;
   line-height: 30px;
@@ -1030,9 +1038,30 @@ article.slider-item.slider-item-1, .slider p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 940px;
+  overflow: hidden;
+}
+
+.catalog-columns-wrapper {
+  width: 940px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.catalog-right-column {
+  width: 720px;
+}
+
+.catalog-left-column {
+  width: 220px;
 }
 
 .catalog h1 {
+  margin: 0;
+  padding: 0;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -1139,6 +1168,7 @@ button.product-filter-button:active {
 }
 
 .product-sort {
+  margin-left: 20px;
   width: 700px;
   padding: 7px 0px;
   display: -webkit-box;
@@ -1414,7 +1444,7 @@ input[type="checkbox"]:disabled+label, input[type="radio"]:disabled+label {
 
 .product-list {
   width: 700px;
-  margin-left: 239px;
+  margin-left: 20px;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1713,6 +1743,10 @@ span.old-price {
 }
 
 .product-description h2 {
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 29px;
+
   font-family: "CuprumRegular", "Arial", sans-serif;
   color: #000000;
   font-size: 30px;
@@ -1724,13 +1758,14 @@ span.old-price {
 /* Pagination - catalog.html */
 
 ul.pagination {
+  margin: 0;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 940px;
   margin-bottom: 66px;
-  margin-left: 240px;
+  margin-left: 20px;
   padding: 0;
 }
 
@@ -1782,6 +1817,9 @@ ul.pagination .actual-page a {
 }
 
 .services h2 {
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
   font-size: 30px;
   font-weight: 400;
   line-height: 24px;
@@ -1962,6 +2000,8 @@ a.credit-button {
 }
 
 .about-company h3 {
+  margin: 0;
+  margin-top: 29px;
   margin-bottom: 27px;
   font-size: 30px;
   font-weight: 400;
